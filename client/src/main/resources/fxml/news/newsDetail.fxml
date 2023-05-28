@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox prefHeight="407.0" prefWidth="559.0" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.news.NewsDetailController">
+    <children>
+        <VBox prefHeight="407.0" prefWidth="286.0" spacing="10.0">
+            <children>
+                <Label fx:id="lblDate" styleClass="newsPublishDate" text="&lt;DD.MM.YYYY | hh:mm&gt;" />
+                <Separator />
+                <Label fx:id="lblTitle" styleClass="newsTitle" text="&lt;NewsTitle&gt;" wrapText="true" />
+                <Separator />
+                <Label fx:id="lblText" styleClass="newsText" text="&lt;NewsText&gt;" wrapText="true" />
+            </children>
+        </VBox>
+        <VBox prefHeight="407.0" prefWidth="275.0">
+            <children>
+                <ImageView fx:id="imageView" fitHeight="258.0" fitWidth="274.0" pickOnBounds="true" preserveRatio="true" />
+                  <Pagination fx:id="pagination" maxPageIndicatorCount="1" pageCount="1" prefHeight="144.0" prefWidth="274.0" stylesheets="@../../css/pagination.css" />
+            </children>
+        </VBox>
+    </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

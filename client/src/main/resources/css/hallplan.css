@@ -1,0 +1,93 @@
+.hallplanwrap Pane{
+    -fx-background-color: #fff;
+}
+
+.hallplan{}
+
+.sector{
+    -fx-background-color: #fff;
+    -fx-padding: 2px;
+    -fx-background-radius: 5px;
+}
+.sector Button{
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-font-size: 20px !important;
+    -fx-background-radius: 15px;
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-text-fill: inherit;
+}
+
+.sector Button:hover{
+    -fx-background-color: rgba(255,255,255,0.4);
+}
+
+.sector Button:disabled{
+    -fx-background-color: rgba(0,0,0,0);
+    -fx-text-fill: inherit;
+}
+
+.sector Label{
+    -fx-pref-width: 80px;
+    -fx-pref-height: 30px;
+    -fx-alignment: center !important;
+    -fx-text-fill: inherit;
+}
+
+.seat {
+    -fx-background-radius: 15px;
+    -fx-font-size: 20px !important;
+    -fx-pref-width: 30px;
+    -fx-pref-height: 30px;
+    -fx-alignment: center !important;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+}
+
+.cat1{ -fx-background-color:#01FF70; -fx-text-fill:#2f652e}
+.cat2{ -fx-background-color:#2ECC40; -fx-text-fill:#1c3f0e}
+.cat3{ -fx-background-color:#3D9970; -fx-text-fill:#19372a}
+.cat4{ -fx-background-color:#7FDBFF; -fx-text-fill:#244966}
+.cat5{ -fx-background-color:#39CCCC; -fx-text-fill:#000000}
+.cat6{ -fx-background-color:#0074D9; -fx-text-fill:#b4dbfe}
+.cat7{ -fx-background-color: #00275d; -fx-text-fill: #ddf6fe}
+.cat8{ -fx-background-color:#FFDC00; -fx-text-fill:#665801}
+.cat9{ -fx-background-color:#FF851B; -fx-text-fill:#65320a}
+.cat10{ -fx-background-color:#FF4136; -fx-text-fill:#7f1916}
+.cat11{ -fx-background-color:#F012BE; -fx-text-fill:#630e4e}
+.cat12{ -fx-background-color:#B10DC9; -fx-text-fill:#efa9f9}
+.cat13{ -fx-background-color:#85144B; -fx-text-fill:#eb7ab1}
+
+.full{
+    -fx-text-fill: #fff !important;
+    -fx-background-color: #000;
+}
+
+.selected{
+    -fx-text-fill: #ff0000 !important;
+    -fx-background-color: #000;
+}
+.border0{
+    -fx-border-width: 0;
+}
+.vBoxColors{
+    -fx-background-color: #fff;
+    -fx-text-fill: #111;
+}
+
+.vBoxColors .circle{
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+    -fx-background-radius: 10px;
+    -fx-font-size: 15px !important;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+    -fx-alignment: center !important;
+    -fx-line-spacing:0;
+}
+
+.vBoxColors .textLabel{
+
+}

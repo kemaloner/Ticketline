@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.inso.sepm.ticketline.client.gui.users.UsersController">
+    <children>
+        <fx:include fx:id="tabHeader" source="/fxml/tabHeader.fxml" />
+        <Separator />
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+            <VBox fillWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                </padding>
+            <children>
+                <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="568.0" prefWidth="869.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="60.0" minHeight="0.0" prefHeight="33.0" valignment="CENTER" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="482.0" valignment="CENTER" />
+                        <RowConstraints maxHeight="80.0" minHeight="8.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <HBox prefHeight="53.0" prefWidth="869.0" spacing="5.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                            <children>
+                                <TextField fx:id="tfSearch" onKeyReleased="#onKeyReleasedSearchField" prefHeight="27.0" prefWidth="342.0" promptText="%users.search_field">
+                              <HBox.margin>
+                                 <Insets />
+                              </HBox.margin></TextField>
+                                <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#onClickedSearch" />
+                           <Button fx:id="btnRefresh" mnemonicParsing="false" onAction="#refresh" />
+                            </children>
+                        <GridPane.margin>
+                           <Insets />
+                        </GridPane.margin>
+                        <padding>
+                           <Insets bottom="10.0" />
+                        </padding>
+                        </HBox>
+                     <TableView fx:id="tableUsers" prefHeight="431.0" prefWidth="863.0" GridPane.rowIndex="1">
+                       <columns>
+                         <TableColumn fx:id="tcFirstName" prefWidth="75.0" text="%users.firstname" />
+                         <TableColumn fx:id="tcLastName" prefWidth="75.0" text="%users.lastname" />
+                           <TableColumn fx:id="tcUserName" prefWidth="75.0" text="%users.username" />
+                           <TableColumn fx:id="tcRole" prefWidth="75.0" text="%users.role" />
+                           <TableColumn fx:id="tcEnable" prefWidth="75.0" text="%users.enable" />
+                       </columns>
+                        <GridPane.margin>
+                           <Insets bottom="60.0" />
+                        </GridPane.margin>
+                     </TableView>
+                         <Pagination fx:id="pagination" maxPageIndicatorCount="30" pageCount="999" prefHeight="458.0" prefWidth="869.0" stylesheets="@../../css/pagination.css" GridPane.rowIndex="1">
+
+                            </Pagination>
+                     <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.rowIndex="2">
+                        <children>
+                           <Button fx:id="btnUserLocked" disable="true" mnemonicParsing="false" onAction="#onClickedUserLocked" prefHeight="35.0" prefWidth="190.0" styleClass="darkred" stylesheets="@../../css/button.css" text="%button.locked" />
+                           <Button fx:id="btnUserActive" disable="true" mnemonicParsing="false" onAction="#onClickedUserActive" prefHeight="35.0" prefWidth="190.0" styleClass="darkgreen" stylesheets="@../../css/button.css" text="%button.active" />
+                        </children>
+                     </HBox>
+                    </children>
+                </GridPane>
+            </children>
+            </VBox>
+        </ScrollPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</VBox>

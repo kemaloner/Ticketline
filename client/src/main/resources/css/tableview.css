@@ -1,0 +1,7 @@
+.table:empty {
+    -fx-background-color: transparent;
+    -fx-size: 35px;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #3c3f41;
+    -fx-border-insets: 0 10 1 10;
+}
